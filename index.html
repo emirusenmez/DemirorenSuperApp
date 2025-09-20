@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Siteleri</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .logo-item {
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .logo-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-item:hover .logo-container {
+            border-color: #667eea;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 100%;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+        }
+
+        .site-name {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .logos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+            
+            .logo-container {
+                height: 150px;
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 Haber Siteleri</h1>
+            <p>Logolara tıklayarak ilgili siteye gidebilirsiniz</p>
+        </div>
+
+        <div class="logos-grid">
+            <div class="logo-item" onclick="window.open('https://hurriyet.go.link/?adj_t=1lyzb33g&adj_campaign=demiroren_bina&utm_source=hurriyet_bina&utm_medium=demiroren_bina', '_blank')">
+                <div class="logo-container">
+                    <img src="logo/hurriyet.svg" alt="Hürriyet" class="logo">
+                </div>
+                <div class="site-name">Hürriyet</div>
+            </div>
+
+            <div class="logo-item" onclick="window.open('https://milliyet.go.link/?adj_t=1l2s4g07&adj_campaign=demiroren_bina&utm_source=milliyet_bina&utm_medium=demiroren_bina', '_blank')">
+                <div class="logo-container">
+                    <img src="logo/Milliyet.svg" alt="Milliyet" class="logo">
+                </div>
+                <div class="site-name">Milliyet</div>
+            </div>
+
+            <div class="logo-item" onclick="window.open('https://cnn-turk-159510.web.app/?utm_source=demiroren_bina&utm_medium=cnnturk_bina', '_blank')">
+                <div class="logo-container">
+                    <img src="logo/cnnturk-tv.svg" alt="CNN Türk" class="logo">
+                </div>
+                <div class="site-name">CNN Türk</div>
+            </div>
+
+            <div class="logo-item" onclick="window.open('https://fanatik.go.link/?adj_t=1l2cl0oz&adj_campaign=demiroren_bina&utm_source=fanatik_bina&utm_medium=demiroren_bina', '_blank')">
+                <div class="logo-container">
+                    <img src="logo/fanatik-logo.svg" alt="Fanatik" class="logo">
+                </div>
+                <div class="site-name">Fanatik</div>
+            </div>
+
+            <div class="logo-item" onclick="window.open('https://posta.go.link/?adj_t=1lndrvf6&adj_campaign=demiroren_bina&utm_source=posta_bina&utm_medium=demiroren_bina', '_blank')">
+                <div class="logo-container">
+                    <img src="logo/Posta.svg" alt="Posta" class="logo">
+                </div>
+                <div class="site-name">Posta</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Haber Siteleri - Tüm hakları saklıdır</p>
+        </div>
+    </div>
+</body>
+</html>
